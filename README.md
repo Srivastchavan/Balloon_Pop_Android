@@ -1,0 +1,11 @@
+# Balloon_Pop_Android
+Pop the Balloon Android game
+
+The game play will display shapes of various colors, and the objective is to touch only the correct ones to make them disappear.  A shape will stay on the screen until it is touched. 
+1.	Brings up a screen that describes game play to the user.  For example, it may say, “Touch only the red Circles,” or “Touch only purple squares.”  The game only has circles and squares as shapes, and uses only the colors Red, Orange, Yellow, Green, Blue, Purple, and White.  These are shown on a dark background.  They will be different randomly-chosen sizes, ranging from 32dp to 64dp.  For circles, this is the diameter.  For squares, this is the length of a side.  The shape and color are also chosen randomly when the program starts.
+2.	When the user presses the OK button, brings up a screen (a new Activity) that shows a random number of circles and squares in different sizes and colors at random positions on the screen. The total number of shapes is between 6 and 12. The program can display a mix of squares and circles, but they don't overlap.
+3.	Objects will stay on the screen until touched.  When an object is touched, it is removed and new object is generated.  
+4.	The playing field is from the bottom of the screen to 2/3 of the screen height.  Above that, there exists running score, timer indicators, etc.
+5.	If you touch a correct shape the time is taken from the MotionEvent.  The touch is the coordinates at the ACTION_DOWN.  That is, sliding your finger around on the screen won’t work.  Thus the reaction time is the difference between the time the shape is touched minus the time it was created.
+6.	The game ends after 10 shapes have been touched.
+7.	Score is the total time it took to touch all of the correct shapes.  Shorter times are better, since this tests reaction time.  Touching an incorrect shape makes it disappear but has no effect on the score.  At the end of the game, the total score is shown and the number of balloons that should have been popped but that went off the screen before the player got them.  If this is a high score, the user can press a button to enter it into the high scores list.  The shorter the time the better, so low numbers are better. 
